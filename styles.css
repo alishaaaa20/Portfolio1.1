@@ -222,11 +222,6 @@ footer {
   text-align: center;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .footer-links a {
   color: white;
   text-decoration: none;
