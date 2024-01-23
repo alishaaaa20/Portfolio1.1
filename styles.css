@@ -10,48 +10,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary-color);
-  padding: 10px 5%;
-  height: 7vh;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-}
-
-.nav-item {
-  margin: 0 10px;
-  transition: all 0.3s ease;
-}
-
-.nav-item:hover {
-  color: #444;
-}
-
-.toggler {
-  display: none;
-  cursor: pointer;
-}
-
-.toggler .line {
-  width: 25px;
-  height: 3px;
-  background-color: #000000;
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
-.container {
-  text-align: center;
-  padding: 40px;
-}
-
 h1 {
   font-size: 48px;
   margin-bottom: 10px;
