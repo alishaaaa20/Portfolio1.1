@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,172 +14,168 @@
     />
     <meta name="author" content="Alisha Khatri" />
     <title>Alisha Khatri - Front-end Developer</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ddc3ee268a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Alisha Khatri</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact </a>
-            </li>
-          </ul>
-        </div>
+    <div class="container">
+      <nav class="d-flex justify-content-between">
+        <a href="/">
+          <img src="images/logo.png" class="logo d-none d-md-block" alt="" />
+          <img
+            src="images/logo-small.jpg"
+            class="logo d-block d-md-none"
+            alt=""
+          />
+        </a>
+        <ul>
+          <li class="active">
+            <a href="index.html"> Home</a>
+          </li>
+          <li>
+            <a href="about.html"> About</a>
+          </li>
+          <li>
+            <a href="projects.html"> Projects</a>
+          </li>
+          <li>
+            <a href="contact.html"> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero">
+      <p>👋 Hello, I am</p>
+      <h1>Alisha Khatri</h1>
+      <h2 class="mb-5">🇳🇵 Front-end developer based in Nepal</h2>
+      <div>
+         <a href="about.html" class="btn btn-branding">About me</a>
+        <a href="contact.html" class="btn btn-branding-outline">Contact me</a>
       </div>
-    </nav>
-
-      <div class="hero-section">
-        <div class="container mt-5">
-          <h2 class="text-center">👋 Hi, I am</h2>
-          <h1 class="text-center">Alisha Khatri</h1>
-          <h3 class="text-center">🇳🇵 Front-end developer, based in Nepal</h3>
-          <div class="navigation-links mb-5">
-            <a href="about.html#contact" class="primary-link">Contact me</a>
-            <a href="about.html" class="secondary-link">About me</a>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="row">
-      <div class="col-md-6">
-        <img
+    </div>
+    <p class="text-center m-5">
+      Featured Project which my best projects be choice to show
+    </p>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col d-none d-lg-block">
+          <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/023/original/tribute.png?1705557712"
           class="img-fluid rounded"
           alt="Mayters Image"
         />
-      </div>
-      <div class="col-md-6">
-        <h2 class="mb-3">Tribute app</h2>
-        <p>
-          The Tribute App, designed with utmost respect, commemorates Nepal's
+        </div>
+        <div class="col">
+          <div class="project-desciption">
+            <h2 class="mb-5">Tribute App</h2>
+            <p class="mb-5 text-muted">
+              The Tribute App, designed with utmost respect, commemorates Nepal's
           four martyrs which is celebrated every year in Nepal on Magh 16 as a
           Mayter's Day. Dedicated to Shukraraj Shastri, Dharma Bhakta Mathema,
           Dashrath Chand, and Ganga Lal Shrestha, this digital tribute preserves
           their enduring legacy and the historic significance of their
           sacrifice. May it serve as a reminder of their contributions and
           inspire gratitude for these national heroes.
-        </p>
-        <div class="mt-5">
-          <a
-            href="https://spectacular-froyo-b61303.netlify.app/"
-            target="_blank"
-            class="primary-link"
-            >Launch Tribute App</a
-          >
+            </p>
+            <a href="https://spectacular-froyo-b61303.netlify.app/" target="_blank" class="btn btn-branding-outline"> Learn more </a>
         </div>
       </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-md-6">
-        <h2 class="mb-3">Weather app</h2>
-        <p>
-          Weather Application is a web-based tool built using HTML, CSS, and
+      <div class="row mb-5">
+        <div class="col">
+          <div class="project-desciption">
+            <h2 class="mb-5">Weather App</h2>
+            <p class="mb-5 text-muted">
+              Weather Application is a web-based tool built using HTML, CSS, and
           vanilla JavaScript to provide users with real-time weather information
           for cities around the world. The application features a simple and
           intuitive interface, offering essential weather details in a visually
           appealing manner.
-        </p>
-        <div class="mb-5 mt-5">
-          <a
-            href="https://funny-jalebi-c77b61.netlify.app/"
-            target="_blank"
-            class="primary-link"
-            >Launch Weather App</a
-          >
+            </p>
+            <a href="https://funny-jalebi-c77b61.netlify.app/" target="_blank" class="btn btn-branding-outline"> Learn more </a>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <img
+        <div class="col d-none d-lg-block">
+          <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/024/original/weather.png?1705557719"
           class="img-fluid rounded"
           alt="Weather Image"
         />
+        </div>
       </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col-md-6">
-        <img
+      <div class="row">
+        <div class="col d-none d-lg-block">
+          <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/022/original/momo.png?1705557702"
           class="img-fluid rounded"
           alt="MoMo Image"
         />
-      </div>
-      <div class="col-md-6">
-        <h2 class="mb-3">MoMo app</h2>
-        <p>
-          The MoMo AppMomo, a culinary masterpiece and my absolute favorite,
+        </div>
+        <div class="col">
+          <div class="project-desciption">
+            <h2 class="mb-5">MoMO App</h2>
+            <p class="mb-5 text-muted">
+              The MoMo AppMomo, a culinary masterpiece and my absolute favorite,
           takes center stage in the Momo App. This App is a tribute to this
           iconic dish, celebrating its cultural significance and the sheer
           delight it brings to food enthusiasts. Join me in savoring the magic
           of momos through the Momo App—an ode to Nepal's most loved and
           cherished food.
-        </p>
-        <div class="mt-5">
-          <a
-            href="https://heroic-granita-ed758b.netlify.app/"
-            target="_blank"
-            class="primary-link"
-            >Launch MoMo App</a
-          >
+            </p>
+            <a href="https://heroic-granita-ed758b.netlify.app/" class="btn btn-branding-outline"> Learn more </a>
+          </div>
         </div>
       </div>
-    </div>
-    <section class="contact-section text-center">
-        <!-- Contact section content (social links, contact form, etc.) -->
-    </section>
-    
-    <footer>
-        <div class="container text-center">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="copyright-info">
-                    <p>&copy; 2024 Your Name. All rights reserved.</p>
-                </div>
-            </div>
+      <footer>
+        <div class="contact-box justify-content-between mb-5 d-none d-md-flex">
+          <div>
+            <h4>Work Inquiry</h4>
+            <p class="text-muted">Let's work together</p>
+          </div>
+          <div>
+            <a href="" class="btn btn-branding mt-3"> Contact me </a>
+          </div>
         </div>
-    </footer>
+        <div class="d-flex justify-content-center mb-5">
+          <a href="mailto:alishakhatri8888@gmail.com" class="email-link">
+            alishakhatri8888@gmail.com
+          </a>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://www.facebook.com/alisha.khatri.58173/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/alishaaaa1920/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/alisha-khatri-3b1675220/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/alishaaaa20" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
