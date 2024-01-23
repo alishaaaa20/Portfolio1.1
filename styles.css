@@ -1,6 +1,6 @@
 :root {
-  --branding-color: #6c63ff;
-  --secondary-color: #f9f7fe;
+  --branding-color: #66bfbf;
+  --secondary-color: #eaf6f6;
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
 }
@@ -111,7 +111,8 @@ p {
 }
 
 .logo {
-  max-height: 40px;
+  max-width: 150px;
+  max-height: 45px;
 }
 
 nav {
