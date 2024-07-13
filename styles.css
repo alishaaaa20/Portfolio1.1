@@ -17,16 +17,16 @@ h5,
 h6 {
   color: black;
   font-family: var(--heading-font-family);
-  font-weight: bold;
+  font-weight: normal;
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 70px;
   line-height: 1.5;
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 50px;
 }
 
 h3 {
@@ -50,6 +50,7 @@ p {
   font-weight: bold;
   margin: 0;
   color: #272142;
+  animation: slideInLeft 1s ease;
 }
 
 .hero h2 {
@@ -95,6 +96,7 @@ p {
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
+  transition: all 0.3s;
 }
 
 .btn-branding-outline {
@@ -104,10 +106,12 @@ p {
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
+  transition: all 0.3s;
 }
 
 .project-desciption {
   padding: 120px 60px;
+  animation: fadeInUp 1s ease;
 }
 
 .logo {
@@ -116,6 +120,7 @@ p {
 
 nav {
   padding: 20px 0;
+  animation: fadeInDown 1s ease;
 }
 
 nav ul {
@@ -187,7 +192,7 @@ footer .social-links a:hover {
   }
 
   h2 {
-    font-size: 44px;
+    font-size: 30px;
   }
 
   h3 {
@@ -202,5 +207,52 @@ footer .social-links a:hover {
   .project-desciption {
     padding: 0;
     text-align: center;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
