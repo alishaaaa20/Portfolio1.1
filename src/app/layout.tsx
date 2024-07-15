@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Header from "@/components/Header/Header";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -27,6 +27,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <Header />
         {children}
       </body>
     </html>
