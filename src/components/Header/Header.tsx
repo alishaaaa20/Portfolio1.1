@@ -50,7 +50,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`w-full sticky top-0 z-50 bg-white ${
-        isScrolled && "shadow-xl shadow-primary"
+        isScrolled && "shadow-xl shadow-primary/20"
       }`}
     >
       <nav>
