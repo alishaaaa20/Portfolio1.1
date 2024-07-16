@@ -1,7 +1,10 @@
 import React, { useId } from "react";
 
-const BackgroundDesign = (props: any) => {
-  let id = useId();
+interface BackgroundDesignProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+const BackgroundDesign: React.FC<BackgroundDesignProps> = (props) => {
+  const id = useId();
+
   return (
     <div {...props}>
       <svg
