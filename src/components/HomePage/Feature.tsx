@@ -6,7 +6,7 @@ import DesktopFeature, { FeatureMobile } from "../DesktopFeature";
 const Feature = () => {
   return (
     <section
-      id="features"
+      id="about-me"
       aria-label="Features for investing all your money"
       className="bg-secondary py-10 sm:py-20"
     >
