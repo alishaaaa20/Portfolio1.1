@@ -1,8 +1,6 @@
 "use client";
-
 import React, { useEffect, useState, ReactNode } from "react";
 import Container from "../Container";
-// import Logo from "./Logo";
 import NavLinks from "../Navbar/NavLinks";
 import { Button } from "../ui/button";
 import { Popover } from "@headlessui/react";
@@ -54,7 +52,7 @@ const Header: React.FC = () => {
       }`}
     >
       <nav>
-        <Container className="relative z-50 flex justify-between py-8">
+        <Container className="relative z-50 flex justify-between py-6">
           {/* Logo */}
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/">
@@ -66,17 +64,19 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex lg:gap-10 items-center text-lg">
+          <div className="hidden lg:flex lg:gap-10 items-center text-xl">
             <NavLinks />
           </div>
 
-          <div className="flex items-center gap-6">
-            <Button
-              className="hidden lg:block border border-primary hover:bg-secondary"
-              variant="outline"
-            >
-              Hire me
-            </Button>
+          <div className="flex items-center">
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="border border-primary  text-black items-center rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-md font-medium  py-4"
+              >
+                <span>Get in Touch</span>
+              </Button>
+            </Link>
 
             {/* Mobile NavLinks */}
             <Popover className="lg:hidden">
@@ -127,7 +127,7 @@ const Header: React.FC = () => {
                               variant="outline"
                               className="border border-primary hover:bg-secondary"
                             >
-                              Hire me
+                              Get in touch
                             </Button>
                           </div>
                         </Popover.Panel>

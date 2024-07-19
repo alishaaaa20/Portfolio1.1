@@ -8,7 +8,7 @@ const Feature = () => {
     <section
       id="about-me"
       aria-label="Features for investing all your money"
-      className="bg-secondary py-10 sm:py-20"
+      className="bg-white py-10 sm:py-20"
     >
       <Container>
         <div className="max-w-2xl mx-auto lg:mx-0 lg:max-w-3xl">
