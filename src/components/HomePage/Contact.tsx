@@ -17,10 +17,7 @@ export default function Contact() {
             <MapPin />
             Sankhamul, New Baneshwor
           </P>
-          <P className="flex flex-row items-center gap-2">
-            <Phone />
-            9862587365
-          </P>
+
           <P className="flex flex-row items-center gap-2">
             <Mail />
             alishakhatri8888@gmail.com
