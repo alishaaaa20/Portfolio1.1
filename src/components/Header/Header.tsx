@@ -52,9 +52,9 @@ const Header: React.FC = () => {
       }`}
     >
       <nav>
-        <Container className="relative z-50 flex justify-between py-6">
+        <Container className="relative z-50 flex items-center justify-between py-6">
           {/* Logo */}
-          <div className="relative z-10 flex items-center gap-16">
+          <div className="flex items-center">
             <Link href="/">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/789/original/Screenshot_2024-01-23_at_4.04.48_PM-removebg-preview.png?1706005275"
@@ -68,16 +68,7 @@ const Header: React.FC = () => {
             <NavLinks />
           </div>
 
-          <div className="flex items-center">
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="border border-primary  text-black items-center rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-md font-medium  py-4"
-              >
-                <span>Get in Touch</span>
-              </Button>
-            </Link>
-
+          <div className="flex items-center lg:hidden">
             {/* Mobile NavLinks */}
             <Popover className="lg:hidden">
               {({ open }) => (
@@ -121,14 +112,6 @@ const Header: React.FC = () => {
                                 {title}
                               </MobileNavLink>
                             ))}
-                          </div>
-                          <div className="mt-8 flex flex-col gap-4">
-                            <Button
-                              variant="outline"
-                              className="border border-primary hover:bg-secondary"
-                            >
-                              Get in touch
-                            </Button>
                           </div>
                         </Popover.Panel>
                       </>

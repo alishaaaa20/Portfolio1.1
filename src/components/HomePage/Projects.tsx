@@ -1,14 +1,6 @@
 import React from "react";
 import Container from "../Container";
 import Title from "../Title";
-import {
-  DeviceArrowIcon,
-  DeviceCardsIcon,
-  DeviceClockIcon,
-  DeviceListIcon,
-  DeviceLockIcon,
-  DeviceChartIcon,
-} from "@/components/StockLogos";
 import { GiLipstick, GiGraduateCap, GiCondorEmblem } from "react-icons/gi";
 import {
   MdMovieFilter,
@@ -16,7 +8,7 @@ import {
   MdLocalCafe,
 } from "react-icons/md";
 
-const accountData = [
+const projectsData = [
   {
     name: "Effortless Beauty",
     description:
@@ -73,7 +65,7 @@ const Projects = () => {
           role="list"
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
         >
-          {accountData.map((item) => (
+          {projectsData.map((item) => (
             <li
               key={item.name}
               className="rounded-2xl border border-gray-200 hover:border-gray-300 p-8 group hover:bg-gray-100 duration-300 cursor-pointer"
