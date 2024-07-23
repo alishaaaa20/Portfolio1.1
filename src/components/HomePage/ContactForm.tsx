@@ -1,107 +1,155 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import { useToast } from "@/components/ui/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Contact, ContactSchema } from "@/schemas/contact-schema";
+import { Loader2 } from "lucide-react";
 import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
 
-export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
+export const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const { toast } = useToast();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<Contact>({
+    resolver: zodResolver(ContactSchema),
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
+  const onSubmit = async (data: Contact) => {
+    const res = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    if (res.ok) {
+      reset();
+      toast({
+        title: "Thank You for contacting us. 🎉",
+        description:
+          "We've got your inquiry and are on it! Expect a response soon. Your thoughts matter to us! 🤝",
+        variant: "success",
       });
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-      } else {
-        alert("Failed to send message.");
-      }
-    } catch (error) {
-      alert("An error occurred. Please try again.");
+    } else {
+      toast({
+        title: "Sorry something went wrong. 🚫",
+        description:
+          "Looks like there's a small glitch in the system. Please verify your information and resend your message. We're working to fix this issue! 🛠️",
+        variant: "destructive",
+      });
     }
   };
 
   return (
-    <section className="">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <Label htmlFor="name">Name</Label>
-          <Input
-            type="text"
-            id="name"
-            placeholder="Enter your name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mt-4">
-          <Label htmlFor="email">Email</Label>
-          <Input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mt-4">
-          <Label htmlFor="phone">Phone</Label>
-          <Input
-            type="tel"
-            id="phone"
-            placeholder="Enter your phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mt-4">
-          <Label htmlFor="subject">Subject</Label>
-          <Input
-            type="text"
-            id="subject"
-            placeholder="Enter your subject"
-            value={formData.subject}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mt-4">
-          <Label htmlFor="message">Message</Label>
-          <Textarea
-            id="message"
-            placeholder="Enter your message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="mt-8 flex justify-end">
-          <Button
-            variant={"outline"}
-            className="border-primary text-black hover:bg-primary hover:text-white bg-white"
-          >
-            Send
-          </Button>
+    <div className="px-8">
+      <form
+        ref={formRef}
+        method="POST"
+        onSubmit={handleSubmit(onSubmit)}
+        action=""
+        className="rounded-xl bg-white md:w-full"
+      >
+        <div className="rounded-xl border p-4">
+          <div className="flex flex-col gap-4 p-0">
+            <div className="flex-1">
+              <div className="flex flex-col gap-3">
+                <Label htmlFor="fullName">Full Name</Label>
+                <Input
+                  id="fullName"
+                  {...register("fullName")}
+                  className="focus:ring-none bg-gray-50 font-normal text-neutral-800 focus:outline-none"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              <p className="text-xs text-red-500">
+                {errors.fullName?.message || ""}
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <div className="flex-1">
+                <div className="flex-1 flex-col gap-3">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    {...register("email")}
+                    className="focus:ring-none bg-gray-50 font-normal text-neutral-800 focus:outline-none"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <p className="text-xs text-red-500">
+                  {errors.email?.message || ""}
+                </p>
+              </div>
+              <div className="flex-1">
+                <div className="flex-1 flex-col gap-3">
+                  <Label htmlFor="contact">Phone No.</Label>
+                  <Input
+                    id="contact"
+                    {...register("contact")}
+                    className="focus:ring-none bg-gray-50 font-normal text-neutral-800 focus:outline-none"
+                    placeholder="Eg: 98xxxxxxxx"
+                  />
+                </div>
+                <p className="text-xs text-red-500">
+                  {errors.contact?.message || ""}
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <div className="flex-1">
+                <div className="flex flex-col gap-3">
+                  <Label htmlFor="subject">Subject</Label>
+                  <Input
+                    id="subject"
+                    {...register("subject")}
+                    className="focus:ring-none bg-gray-50 font-normal text-neutral-800 focus:outline-none"
+                    placeholder="Enter your subject"
+                  />
+                </div>
+                <p className="text-xs text-red-500">
+                  {errors.subject?.message || ""}
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className="flex flex-col gap-3">
+                <Label htmlFor="description">Description</Label>
+                <Textarea
+                  id="description"
+                  rows={5}
+                  {...register("description")}
+                  className="focus:ring-none bg-gray-50 font-normal text-neutral-800 focus:outline-none"
+                  placeholder="Describe your enquiry here"
+                />
+              </div>
+              <p className="text-xs text-red-500">
+                {errors.description?.message || ""}
+              </p>
+            </div>
+          </div>
+          <div className="w-full py-3">
+            <Button disabled={isSubmitting} className="w-full text-white">
+              {isSubmitting ? (
+                <span className="flex items-center justify-center gap-2">
+                  <Loader2 size={20} className="animate-spin" />
+                  Submitting
+                </span>
+              ) : (
+                "Send Message"
+              )}
+            </Button>
+          </div>
         </div>
       </form>
-    </section>
+    </div>
   );
-}
+};
