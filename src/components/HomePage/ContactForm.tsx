@@ -34,16 +34,16 @@ export const ContactForm = () => {
     if (res.ok) {
       reset();
       toast({
-        title: "Thank You for contacting us. 🎉",
+        title: "Thank You for contacting me. 🎉",
         description:
-          "We've got your inquiry and are on it! Expect a response soon. Your thoughts matter to us! 🤝",
+          "I have received your message and will get back to you soon. 🤝📧",
         variant: "success",
       });
     } else {
       toast({
         title: "Sorry something went wrong. 🚫",
         description:
-          "Looks like there's a small glitch in the system. Please verify your information and resend your message. We're working to fix this issue! 🛠️",
+          "Please try again later or contact me through my social media. 🙏",
         variant: "destructive",
       });
     }
