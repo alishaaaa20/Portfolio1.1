@@ -47,13 +47,15 @@ const Hero = () => {
             </a>
           </div>
           <div className="mt-5">
-            <Button
-              variant="outline"
-              className="border border-primary text-white text-lg font-medium items-center rounded-lg hover:bg-primary hover:text-white transition-all duration-300 bg-primary"
-            >
-              <BiDownload className="text-xl" size={25} />
-              <span className="ml-2.5 text-white">Download CV</span>
-            </Button>
+            <a href="/Alisha_Khatri_Resume.pdf" download>
+              <Button
+                variant="outline"
+                className="border border-primary text-white text-lg font-medium items-center rounded-lg hover:bg-primary hover:text-white transition-all duration-300 bg-primary"
+              >
+                <BiDownload className="text-xl" size={25} />
+                <span className="ml-2.5 text-white">Download CV</span>
+              </Button>
+            </a>
           </div>
         </div>
       </Container>
