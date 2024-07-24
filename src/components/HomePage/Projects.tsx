@@ -74,17 +74,17 @@ const Projects = () => {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto  mt-10 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
         >
           {projectsData.map((item) => (
             <Link key={item.name} href={item.link} passHref legacyBehavior>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-2xl bg-white border border-gray-200 hover:border-gray-300 p-8 group hover:bg-secondary transition duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
+                className="rounded-2xl bg-white  hover:border-primary border border-primary p-8 group hover:bg-secondary transition duration-300 hover:shadow-lg transform hover:-translate-y-1"
               >
                 <item.icon className="h-12 w-12 text-primary mx-auto" />
-                <h3 className="mt-6 text-xl font-semibold text-gray-900 group-hover:text-black transition duration-300">
+                <h3 className="mt-4 text-xl font-semibold text-gray-900 group-hover:text-black transition duration-300">
                   {item.name}
                 </h3>
                 <p className="mt-2 text-gray-700 group-hover:text-black transition duration-300">
