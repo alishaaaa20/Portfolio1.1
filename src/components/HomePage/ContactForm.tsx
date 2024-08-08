@@ -56,9 +56,9 @@ export const ContactForm = () => {
         method="POST"
         onSubmit={handleSubmit(onSubmit)}
         action=""
-        className="rounded-xl bg-white md:w-full"
+        className="rounded-xl bg-white md:w-full "
       >
-        <div className="rounded-xl border p-4">
+        <div className="rounded-xl border  border-primary p-4">
           <div className="flex flex-col gap-4 p-0">
             <div className="flex-1">
               <div className="flex flex-col gap-3">

@@ -50,10 +50,10 @@ const Hero = () => {
             <a href="/Alisha_Khatri_Resume.pdf" download>
               <Button
                 variant="outline"
-                className="border border-primary text-white text-lg font-medium items-center rounded-lg hover:bg-primary hover:text-white transition-all duration-300 bg-primary"
+                className="border border-primary text-white text-lg font-medium items-center rounded-lg hover:bg-primary/50 hover:text-black transition-all duration-300 bg-primary"
               >
                 <BiDownload className="text-xl" size={25} />
-                <span className="ml-2.5 text-white">Download CV</span>
+                <span className="ml-2.5">Download CV</span>
               </Button>
             </a>
           </div>

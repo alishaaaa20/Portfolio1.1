@@ -9,7 +9,7 @@ export default function Contact() {
     <Container id="contact" aria-label="Contact" className="py-20">
       <H1>Get in Touch</H1>
       <div className="flex lg:flex-row flex-col gap-20 mt-10">
-        <div className="lg:w-[600px]">
+        <div className="lg:w-[600px] ">
           <ContactForm />
         </div>
         <div className="flex flex-col lg:w-[600px] gap-4">
