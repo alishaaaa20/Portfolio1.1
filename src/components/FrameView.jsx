@@ -2,17 +2,6 @@ import { useId } from "react";
 import AppScreen from "@/components/AppScreen";
 import { motion } from "framer-motion";
 import {
-  DiageoLogo,
-  LaravelLogo,
-  MirageLogo,
-  ReversableLogo,
-  StatamicLogo,
-  StaticKitLogo,
-  TransistorLogo,
-  TupleLogo,
-} from "@/components/StockLogos";
-import clsx from "clsx";
-import {
   FaCode,
   FaServer,
   FaToolbox,
@@ -164,7 +153,7 @@ function EducationScreen({ custom, animated = false }) {
               {
                 label: "+2-Science (NEB) ",
                 value: "Kathmandu Model Secondary School (KMC) ",
-                date: "2017-2029",
+                date: "2017-2019",
               },
               {
                 label: "SEE ",
@@ -254,6 +243,12 @@ function WorkExperienceScreen({ custom, animated = false }) {
         <div className="px-4 py-6">
           <div className="space-y-4">
             {[
+                {
+                label: "Frontend Engineer",
+                value: "Full-time",
+                company: "Nepware Pvt. Ltd.",
+                date: "August 2024 - Present",
+              },
               {
                 label: "Frontend Engineer",
                 value: "Intern (3 months)",
